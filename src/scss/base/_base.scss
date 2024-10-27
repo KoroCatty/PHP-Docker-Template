@@ -1,0 +1,20 @@
+@use "../abstracts/" as *;
+@use "./reset" as *;
+
+body {
+  font-family: $primaryFont;
+  background: $primaryColor;
+  box-sizing: border-box;
+}
+
+// .app {
+//   text-align: center;
+//   display: flex;
+//   flex-direction: column;
+//   min-height: 100vh;
+// }
+
+// .appContent {
+//   margin: 1rem auto;
+//   flex: 1;
+// }

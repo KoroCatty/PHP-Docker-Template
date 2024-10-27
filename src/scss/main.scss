@@ -10,14 +10,15 @@
 -- layout imports
 **/
 
+// vendor imports
+@use "./vendors/bootstrap";
+
 // base imports
 @use "./base/base";
 
-// page imports
-@use "./pages/notfound";
-
 // component imports
-
+@use "./pages/hero";
+@use "./pages/notfound";
 
 // variables imports
 @use "./abstracts/variables" as *;
@@ -25,3 +26,19 @@
 // layout imports
 @use "./layout/footer";
 @use "./layout/header";
+
+// test SCSS bellow
+body {
+  background-color: rgb(194, 48, 118);
+
+  @include mq("xl") {
+    background-color: rgb(195, 206, 198);
+  }
+}
+
+header {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  padding: 2rem;
+  font-size: 1.5rem;
+}

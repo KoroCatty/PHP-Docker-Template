@@ -18,87 +18,19 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -108,17 +40,8 @@ video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
@@ -126,20 +49,16 @@ body {
   line-height: 1;
 }
 
-ol,
-ul {
+ol, ul {
   list-style: none;
 }
 
-blockquote,
-q {
+blockquote, q {
   quotes: none;
 }
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
+blockquote:before, blockquote:after,
+q:before, q:after {
   content: "";
   content: none;
 }
@@ -151,34 +70,23 @@ table {
 
 body {
   font-family: "Open Sans", apple-system, sans-serif;
-  background: #ffffff;
+  background: #FFFFFF;
   box-sizing: border-box;
-  margin: 2rem 0;
-  overflow-x: hidden;
-}
-@media screen and (max-width: 480px) {
-  body {
-    margin: 1rem 0;
-  }
 }
 
-main {
-  margin-top: 12rem;
+#hero-section {
+  margin: 1rem auto;
+  padding: 2rem 10rem;
 }
-@media screen and (max-width: 480px) {
-  main {
-    margin-top: 7.5rem;
-  }
+#hero-section h1 {
+  font-weight: bolder;
+  font-size: 4em;
+  margin: 2rem 0;
 }
-@media screen and (max-width: 767px) and (min-width: 480px) {
-  main {
-    margin-top: 9rem;
-  }
-}
-@media screen and (max-width: 1079px) and (min-width: 768px) {
-  main {
-    margin-top: 10rem;
-  }
+#hero-section p {
+  margin: 1rem 0 4rem 0;
+  font-weight: 300;
+  font-size: 1.1em;
 }
 
 .notFoundWrapper {
@@ -191,9 +99,18 @@ main {
   margin: auto;
 }
 
+body {
+  background-color: rgb(194, 48, 118);
+}
+@media screen and (min-width: 1080px) {
+  body {
+    background-color: rgb(195, 206, 198);
+  }
+}
+
 header {
-  padding: 2rem 3rem;
-  background-color: azure;
-  display: flex;
-  width: 100%;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  padding: 2rem;
+  font-size: 1.5rem;
 }

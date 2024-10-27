@@ -8,8 +8,7 @@
   type="text/javascript"
   src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script> -->
 
-<!-- <script src="./build/js/main.js"></script> -->
-
+<script src="build/js/main.js" defer></script>
 </body>
 
 </html>

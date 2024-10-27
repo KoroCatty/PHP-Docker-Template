@@ -1,5 +1,11 @@
 <?php include 'layout/header.php'; ?>
 
+
+<?php
+include 'connect.php';
+?>
+
+
 <main>
     <h1>PHP Docker </h1>
 

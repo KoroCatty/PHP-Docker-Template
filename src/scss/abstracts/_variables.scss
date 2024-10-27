@@ -76,11 +76,6 @@ $breakpoints: (
   "xl": "screen and (min-width: 1080px)",
 );
 
-// EXAMPLES
-// @include mq('xl') {
-//   background-color: rgb(195, 206, 198);
-// }
-
 // FUNCTION: Set text color dynamically
 @function set-text-color($color) {
   @if (color.lightness($color) > 70) {

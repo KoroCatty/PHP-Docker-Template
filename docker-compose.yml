@@ -18,7 +18,7 @@ services:
       - db
 
   db:
-    image: mysql:8.0  # MySQLの5.7バージョンのイメージを使用
+    image: mysql:8.0  # MySQLの8バージョンのイメージを使用
     container_name: mysql-db
     environment:
       MYSQL_ROOT_PASSWORD: root_password
@@ -27,7 +27,7 @@ services:
       MYSQL_PASSWORD: user_password
     restart: always  # サービスが停止した場合に常に再起動
     volumes:
-      - ./src/db-data:/var/lib/mysql  # MySQLデータベースの保存先をホストのsrc/db-dataに
+      - ./db/db-data:/var/lib/mysql  # MySQLデータベースのボリュームの保存先
     networks:
       - app-network
 
