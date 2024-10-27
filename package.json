@@ -1,0 +1,31 @@
+{
+  "name": "php-crud",
+  "version": "1.0.0",
+  "description": "just practice",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chokidar-cli": "^3.0.0",
+    "concurrently": "^9.0.1",
+    "cssnano": "^7.0.6",
+    "postcss": "^8.4.47",
+    "postcss-cli": "^11.0.0",
+    "sass": "^1.80.3",
+    "sass-migrator": "^2.2.0",
+    "terser": "^5.36.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:sass": "sass --no-source-map --watch scss:build/css",
+    "minify:js": "terser js/main.js --compress --mangle --output build/js/main.js",
+    "watch:js": "chokidar js/main.js -c \"npm run minify:js\"",
+    "minify:css": "postcss build/css/*.css --use cssnano -d build/css/",
+    "build": "sass --no-source-map scss:build/css && npm run minify:css && npm run minify:js",
+    "watch": "concurrently \"npm run watch:sass\" \"npm run watch:js\"",
+    "format": "prettier --write \"{css,js,scss}/**/*.{js,scss,css}\" "
+  },
+  "dependencies": {
+    "prettier": "^3.3.3"
+  }
+}

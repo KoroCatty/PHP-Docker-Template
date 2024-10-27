@@ -1,0 +1,34 @@
+// Versions
+node.js v18.17.0
+npm 9.6.7
+
+// Commands
+npm init 
+npm install sass 
+npm install postcss postcss-cli cssnano --save-dev // css minify
+npm install terser --save-dev // js minify
+npm install chokidar-cli --save-dev // watch files for JS (terser doesn't have watch functionality)
+npm install concurrently --save-dev // run multiple commands
+
+
+// create file 
+// postcss.config.js
+module.exports = {
+  plugins: [
+    require('cssnano')({
+      preset: 'default',
+    }),
+  ],
+};
+
+// Development
+npm run format
+npm run watch
+npm run build (Minify CSS & JS)
+
+
+// With Docker this Live Reload might work
+// npm i browser-sync --save-dev 
+// "watch:all": "concurrently \"npm run watch\" \"npm run serve\"",
+// "serve": "browser-sync start --proxy 'localhost:8888' --files \"build/css/*.css, build/js/*.js, *.php\"",
+

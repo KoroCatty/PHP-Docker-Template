@@ -1,0 +1,27 @@
+// MAIN SCSS FILE
+
+/** TABLE OF CONTENTS 
+-----------------------
+-- REMINDER: abstract/variables.scss needs to be brought into components that require it! 
+
+-- NEW: vendor imports
+-- base imports
+-- component imports
+-- layout imports
+**/
+
+// base imports
+@use "./base/base";
+
+// page imports
+@use "./pages/notfound";
+
+// component imports
+
+
+// variables imports
+@use "./abstracts/variables" as *;
+
+// layout imports
+@use "./layout/footer";
+@use "./layout/header";

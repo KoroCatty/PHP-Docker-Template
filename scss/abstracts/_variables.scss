@@ -1,0 +1,104 @@
+// abstracts/variables.scss
+
+// TYPOGRAPHY
+@use "sass:map";
+
+@use "sass:color";
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+$primaryFont: "Open Sans", apple-system, sans-serif;
+
+$ff:
+  "Noto Sans JP",
+  "YakuHanJPs",
+  "Lato",
+  "Custom Yu Gothic",
+  "游ゴシック",
+  "Yu Gothic",
+  YuGothic,
+  Hiragino Sans,
+  "Meiryo",
+  Hiragino Kaku Gothic ProN,
+  sans-serif,
+  "UD Shin Go Regular",
+  "Lucida Grande",
+  "Hiragino Kaku Gothic ProN",
+  "ヒラギノ角ゴ ProN W3",
+  Meiryo,
+  メイリオ,
+  sans-serif;
+
+$YuGothic:
+  "Yu Gothic",
+  "游ゴシック",
+  "Yu Gothic",
+  YuGothic,
+  Hiragino Sans,
+  "Meiryo",
+  Hiragino Kaku Gothic ProN,
+  sans-serif;
+
+$mincho: 游明朝, "Yu Mincho", YuMincho, "Hiragino Mincho ProN",
+  "Hiragino Mincho Pro", HGS明朝E, メイリオ, Meiryo, serif;
+
+$din-bi: "din-bi";
+$din-cb: "din-cb";
+$din-bl: "din-bl";
+$din-b: "din-b";
+$din-m: "din-m";
+$din-cm: "din-cm";
+$ud-m: "UD Shin Go Medium";
+$ud-db: "UD Shin Go DemiBold";
+$ud-b: "UD Shin Go Bold";
+
+// COLORS
+$primaryColor: #ffffff;
+$complementaryColor: #111827; /* TAILWIND: GRAY 900 */
+$complementarySkewColor: #212529;
+$highlightColor: #9ca3af; /* TAILWIND: GRAY 400 */
+$brandColor: #60a5fa; /* TAILWIND: BLUE 400 */
+$brandSkewColor: #818cf8; /* TAILWIND: INDIGO 400 */
+$succesColor: #16a34a; /* TAILWIND: GREEN 600 */
+$errorColor: #dc2626; /* TAILWIND: RED 600 */
+$base: #f2f2f2;
+$secondary_base: #ff0012;
+$accent: #ffee00;
+$bg: #f2f2f2;
+
+// SPACING
+$spacer: 2rem;
+
+// Responsive Breakpoints
+$breakpoints: (
+  "s": "screen and (max-width: 480px)",
+  "m": "screen and (max-width: 767px) and (min-width: 480px)",
+  "l": "screen and (max-width: 1079px) and (min-width: 768px)",
+  "xl": "screen and (min-width: 1080px)",
+);
+
+// EXAMPLES
+// @include mq('xl') {
+//   background-color: rgb(195, 206, 198);
+// }
+
+// FUNCTION: Set text color dynamically
+@function set-text-color($color) {
+  @if (color.lightness($color) > 70) {
+    @return $complementaryColor;
+  } @else {
+    @return $primaryColor;
+  }
+}
+
+// MIXIN: Set background color dynamically
+@mixin setBackground($color) {
+  background-color: $color;
+  color: set-text-color($color);
+}
+
+// Mixin for Media Queries using map.get
+@mixin mq($breakpoint: "md") {
+  @media #{map.get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
