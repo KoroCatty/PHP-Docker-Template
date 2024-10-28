@@ -17,8 +17,9 @@ RUN a2enconf 000-default
 # Composerをインストール
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-# 作業ディレクトリを指定
+# phpdotenvライブラリをインストール
 WORKDIR /var/www/html
+RUN composer require vlucas/phpdotenv
 
 # Composerのバージョン確認
 RUN composer --version

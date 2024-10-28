@@ -51,6 +51,14 @@ Composer のバージョンを確認する
 ```
 docker exec -it php-apache bash
 docker-php-ext-install mysqli
+exit
+```
+
+## php dot env install
+```
+docker exec -it php-apache bash
+composer require vlucas/phpdotenv
+exit
 ```
 
 ## PHPMyAdmin 
